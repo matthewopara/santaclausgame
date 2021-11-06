@@ -34,11 +34,12 @@ public class LevelLoader : MonoBehaviour
         SceneManager.LoadScene(sceneIdx);
     }
 
-    private void Update()
+    // For Testing Purposes
+    /*private void Update()
     {
         if (Input.GetKey(KeyCode.Space))
         {
             LoadNextLevel();
         }
-    }
+    }*/
 }
