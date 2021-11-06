@@ -8,14 +8,15 @@ public class TilemapChecker : MonoBehaviour
     // remove gridLayout & tilemap
     public GridLayout gridLayout;
     public Tilemap tilemap;
-    public bool CanMove(Vector2 currentPosition, Direction moveDirection, Tilemap tilemap)
+    public bool CanMove(Vector2 currentPosition, Direction direction, Tilemap tilemap)
     {
-        Vector2 newPosition = currentPosition + DirectionToVector(moveDirection);
+        Vector2 newPosition = currentPosition + DirectionToVector(direction);
         Vector3Int cellPositon = gridLayout.WorldToCell(newPosition);
         TileBase tile = tilemap.GetTile(cellPositon);
         return tile == null;
     }
 
+    // Add to utils
     private Vector2 DirectionToVector(Direction direction)
     {
         switch (direction)
@@ -36,7 +37,7 @@ public class TilemapChecker : MonoBehaviour
     }
 
     // remove start and cellposition
-    private void Start()
+    /*private void Start()
     {
         StartCoroutine(CellPosition());
     }
@@ -50,5 +51,5 @@ public class TilemapChecker : MonoBehaviour
             yield return new WaitForSeconds(1f);
         }
         
-    }
+    }*/
 }
