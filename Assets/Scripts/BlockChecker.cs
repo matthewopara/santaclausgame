@@ -13,9 +13,20 @@ public class BlockChecker : MonoBehaviour
     }
     public bool BlockExists(Vector2 currentPosition, Direction direction)
     {
-        RaycastHit2D hit = Physics2D.Raycast(currentPosition, DirectionToVector(direction), 1f);
-        //return hit.collider.CompareTag("Block")
+        //RaycastHit2D[] hits = Physics2D.RaycastAll(currentPosition, DirectionToVector(direction), 1f);
 
+        /*foreach (RaycastHit2D hit in hits)
+        {
+            if (hit.collider.CompareTag("Block") && hit.collider.gameObject != gameObject)
+            {
+                return true;
+            }
+        }
+
+        return false;*/
+
+        // replace with above code when blocks are done
+        RaycastHit2D hit = Physics2D.Raycast(currentPosition, DirectionToVector(direction), 1f);
         return hit.collider != null;
     }
 
