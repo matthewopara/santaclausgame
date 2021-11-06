@@ -35,11 +35,11 @@ public class LevelLoader : MonoBehaviour
     }
 
     // For Testing Purposes
-    private void Update()
+    /*private void Update()
     {
         if (Input.GetKey(KeyCode.Alpha1))
         {
             LoadNextLevel();
         }
-    }
+    }*/
 }
