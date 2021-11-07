@@ -5,6 +5,7 @@ using UnityEngine;
 public class GridMovement : MonoBehaviour
 {
     private bool isMoving;
+    private bool nextMove = true;
     private Vector3 origPos, targetPos;
     private float timeToMove = 0.2f;
 
@@ -12,17 +13,28 @@ public class GridMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetAxisRaw("Vertical") == 1 && !isMoving)
+        if (Input.GetAxisRaw("Vertical") == 0 && Input.GetAxisRaw("Horizontal") == 0)
+            nextMove = true;
+
+        if (Input.GetAxisRaw("Vertical") == 1 && !isMoving && nextMove){
             StartCoroutine(MovePlayer(Vector3.up));
+            nextMove = false;
+        }
 
-        if (Input.GetAxisRaw("Horizontal") == -1 && !isMoving)
+        if (Input.GetAxisRaw("Horizontal") == -1 && !isMoving && nextMove){
             StartCoroutine(MovePlayer(Vector3.left));
+            nextMove = false;
+        }
 
-        if (Input.GetAxisRaw("Vertical") == -1 && !isMoving)
+        if (Input.GetAxisRaw("Vertical") == -1 && !isMoving && nextMove){
             StartCoroutine(MovePlayer(Vector3.down));
+            nextMove = false;
+        }
 
-        if (Input.GetAxisRaw("Horizontal") == 1 && !isMoving)
+        if (Input.GetAxisRaw("Horizontal") == 1 && !isMoving && nextMove){
             StartCoroutine(MovePlayer(Vector3.right));
+            nextMove = false;
+        }
     }
 
     private IEnumerator MovePlayer(Vector3 direction)
