@@ -1848,7 +1848,7 @@ PrefabInstance:
       objectReference: {fileID: 2014554816}
     - target: {fileID: 2024849322075792750, guid: eee607f805205ff439b863e994e653f8, type: 3}
       propertyPath: timeToMove
-      value: 0.4
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eee607f805205ff439b863e994e653f8, type: 3}

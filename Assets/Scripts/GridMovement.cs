@@ -63,7 +63,7 @@ public class GridMovement : MonoBehaviour
 
             if (Input.GetAxisRaw("Horizontal") == -1 && !isMoving && nextMoveHorizontal)
             {
-               TryToMove(Direction.LEFT);
+                TryToMove(Direction.LEFT);
                 nextMoveHorizontal = false;
             }
 
