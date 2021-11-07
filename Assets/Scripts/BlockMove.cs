@@ -9,6 +9,7 @@ public class BlockMove : MonoBehaviour
     private Rigidbody2D rb;
     [SerializeField] private TilemapChecker checker;
     [SerializeField] private BlockChecker blockChecker;
+    private PuzzleChecker puzzleChecker;
 
     public bool MoveInDirection(Direction direction)
     {
@@ -18,12 +19,14 @@ public class BlockMove : MonoBehaviour
             return false;
         }
         targetPosition += vecDir;
+        StartCoroutine(CheckPuzzle());
         return true;
     }
 
     private void Start()
     {
         // Set this so we don't wander off at the start
+        puzzleChecker = FindObjectOfType<PuzzleChecker>();
         rb = GetComponent<Rigidbody2D>();
         targetPosition = new Vector2(rb.position.x, rb.position.y);
         rb.MovePosition(targetPosition);
@@ -38,5 +41,12 @@ public class BlockMove : MonoBehaviour
     private void MoveTowardsTargetPosition()
     {
         rb.MovePosition(Vector2.MoveTowards(rb.position, targetPosition, speed * Time.fixedDeltaTime));
+    }
+
+    private IEnumerator CheckPuzzle()
+    {
+        yield return new WaitForSeconds(.2f);
+        Debug.Log("Check Puzzle");
+        puzzleChecker.CheckPuzzle();
     }
 }
