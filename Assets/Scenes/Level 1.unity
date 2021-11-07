@@ -1823,7 +1823,7 @@ PrefabInstance:
       objectReference: {fileID: 2014554816}
     - target: {fileID: 2024849322075792750, guid: eee607f805205ff439b863e994e653f8, type: 3}
       propertyPath: timeToMove
-      value: 0.4
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eee607f805205ff439b863e994e653f8, type: 3}
@@ -2027,6 +2027,12 @@ MonoBehaviour:
   delayBeforeDialogue: 3
   trigger1: {fileID: 114154214}
   trigger2: {fileID: 81673696}
+  endingChoice: 0
+  joinText: {fileID: 0}
+  arrestText: {fileID: 0}
+  nameText: {fileID: 0}
+  continueText: {fileID: 0}
+  dialogueText: {fileID: 0}
 --- !u!1001 &798041983
 PrefabInstance:
   m_ObjectHideFlags: 0
