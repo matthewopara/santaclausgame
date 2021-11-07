@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BlockChecker : MonoBehaviour
 {
-    public bool BlockExists(Vector2 currentPosition, Direction direction)
+    public GameObject BlockExists(Vector2 currentPosition, Direction direction)
     {
         RaycastHit2D[] hits = Physics2D.RaycastAll(currentPosition, DirectionToVector(direction), 1f);
 
@@ -12,10 +12,10 @@ public class BlockChecker : MonoBehaviour
         {
             if (hit.collider.CompareTag("Block") && hit.collider.gameObject != gameObject)
             {
-                return true;
+                return hit.collider.gameObject;
             }
         }
-        return false;
+        return null;
     }
 
     // replace with the function in utils

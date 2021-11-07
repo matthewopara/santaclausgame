@@ -4,18 +4,16 @@ using UnityEngine;
 
 public class BlockMove : MonoBehaviour
 {
-    public GameObject player;
     private Vector2 targetPosition, mDir;
-    public const float speed = 2;
-    public Rigidbody2D rb;
-    public BoxCollider2D box;
-    public TilemapChecker checker;
-    public BlockChecker blockChecker;
+    [SerializeField] private float speed = 2;
+    private Rigidbody2D rb;
+    [SerializeField] private TilemapChecker checker;
+    [SerializeField] private BlockChecker blockChecker;
 
     public bool MoveInDirection(Direction direction)
     {
         var vecDir = Utils.DirectionToVector(direction);
-        if(!checker.CanMove(rb.position,direction) || blockChecker.BlockExists(rb.position, direction))
+        if(!checker.CanMove(rb.position, direction) || blockChecker.BlockExists(rb.position, direction) != null)
         {
             return false;
         }
@@ -51,7 +49,6 @@ public class BlockMove : MonoBehaviour
     {
         // Set this so we don't wander off at the start
         rb = GetComponent<Rigidbody2D>();
-        box = GetComponent<BoxCollider2D>();
         targetPosition = new Vector2(rb.position.x, rb.position.y);
         rb.MovePosition(targetPosition);
         rb.freezeRotation = true;
