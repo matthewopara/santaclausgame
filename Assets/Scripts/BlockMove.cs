@@ -21,30 +21,6 @@ public class BlockMove : MonoBehaviour
         return true;
     }
 
-
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-
-    //    if (box.IsTouching(player.GetComponent<BoxCollider2D>()))
-    //    { 
-    //        switch (CollisonSide.ColSide(box, (BoxCollider2D)collision.collider))
-    //        {
-    //            case Direction.UP:
-    //                targetPosition += Vector2.down;
-    //                break;
-    //            case Direction.LEFT:
-    //                targetPosition += Vector2.right;
-    //                break;
-    //            case Direction.RIGHT:
-    //                targetPosition += Vector2.left;
-    //                break;
-    //            case Direction.DOWN:
-    //                targetPosition += Vector2.up;
-    //                break;
-    //        } 
-    //    }
-    //}
-
     private void Start()
     {
         // Set this so we don't wander off at the start
