@@ -1801,6 +1801,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2024849322075792750, guid: eee607f805205ff439b863e994e653f8, type: 3}
+      propertyPath: GFX
+      value: 
+      objectReference: {fileID: 2014554816}
+    - target: {fileID: 2024849322075792750, guid: eee607f805205ff439b863e994e653f8, type: 3}
+      propertyPath: timeToMove
+      value: 0.4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eee607f805205ff439b863e994e653f8, type: 3}
 --- !u!1001 &513796969
@@ -4192,4 +4200,9 @@ MonoBehaviour:
 Animator:
   m_CorrespondingSourceObject: {fileID: 8933859017922851607, guid: 90a5de7410dba264cab4599311b4b0ec, type: 3}
   m_PrefabInstance: {fileID: 1996321616}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2014554816 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2024849320460628501, guid: eee607f805205ff439b863e994e653f8, type: 3}
+  m_PrefabInstance: {fileID: 414018651}
   m_PrefabAsset: {fileID: 0}
