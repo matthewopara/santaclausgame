@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00b27b0139490c9409d301e45f24deb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacleChecker: {fileID: 2024849322075792739}
+  tilemapChecker: {fileID: 2024849322075792739}
   blockChecker: {fileID: 2024849322075792738}
 --- !u!114 &2024849322075792739
 MonoBehaviour:
