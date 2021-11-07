@@ -1678,6 +1678,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7862707694266351669, guid: a5e9ae9adaece134484ccec0c01c8f0c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 6988705558170276131, guid: fe15441eae5b24b46b5bdd5fc44f0d36, type: 3}
     - target: {fileID: 7862707694907726429, guid: a5e9ae9adaece134484ccec0c01c8f0c, type: 3}
       propertyPath: m_Name
       value: Block (5)
@@ -1760,6 +1764,12 @@ MonoBehaviour:
   delayBeforeDialogue: 3
   trigger1: {fileID: 257970465}
   trigger2: {fileID: 1654059837}
+  endingChoice: 0
+  joinText: {fileID: 0}
+  arrestText: {fileID: 0}
+  nameText: {fileID: 0}
+  continueText: {fileID: 0}
+  dialogueText: {fileID: 0}
 --- !u!4 &1244174837
 Transform:
   m_ObjectHideFlags: 0
@@ -1783,6 +1793,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7862707694266351669, guid: a5e9ae9adaece134484ccec0c01c8f0c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2492583872995066, guid: fe15441eae5b24b46b5bdd5fc44f0d36, type: 3}
     - target: {fileID: 7862707694907726429, guid: a5e9ae9adaece134484ccec0c01c8f0c, type: 3}
       propertyPath: m_Name
       value: Block (1)
@@ -2415,6 +2429,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7862707694266351669, guid: a5e9ae9adaece134484ccec0c01c8f0c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1797345868900032826, guid: fe15441eae5b24b46b5bdd5fc44f0d36, type: 3}
     - target: {fileID: 7862707694907726429, guid: a5e9ae9adaece134484ccec0c01c8f0c, type: 3}
       propertyPath: m_Name
       value: Block
@@ -2574,6 +2592,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7862707694266351669, guid: a5e9ae9adaece134484ccec0c01c8f0c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -57278360556575531, guid: fe15441eae5b24b46b5bdd5fc44f0d36, type: 3}
     - target: {fileID: 7862707694907726429, guid: a5e9ae9adaece134484ccec0c01c8f0c, type: 3}
       propertyPath: m_Name
       value: Block (2)
@@ -3211,6 +3233,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7862707694266351669, guid: a5e9ae9adaece134484ccec0c01c8f0c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4933221232156455025, guid: fe15441eae5b24b46b5bdd5fc44f0d36, type: 3}
     - target: {fileID: 7862707694907726429, guid: a5e9ae9adaece134484ccec0c01c8f0c, type: 3}
       propertyPath: m_Name
       value: Block (3)
@@ -3915,6 +3941,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7862707694266351669, guid: a5e9ae9adaece134484ccec0c01c8f0c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1791523196288045538, guid: fe15441eae5b24b46b5bdd5fc44f0d36, type: 3}
     - target: {fileID: 7862707694907726429, guid: a5e9ae9adaece134484ccec0c01c8f0c, type: 3}
       propertyPath: m_Name
       value: Block (4)

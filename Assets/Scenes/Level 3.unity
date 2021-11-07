@@ -199,6 +199,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7862707694266351669, guid: a5e9ae9adaece134484ccec0c01c8f0c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8315032055552403531, guid: 43f96fe1c61b9ab448c748dfdcb1a698, type: 3}
     - target: {fileID: 7862707694907726429, guid: a5e9ae9adaece134484ccec0c01c8f0c, type: 3}
       propertyPath: m_Name
       value: Block (3)
@@ -859,6 +863,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7862707694266351669, guid: a5e9ae9adaece134484ccec0c01c8f0c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8899822974882428000, guid: 43f96fe1c61b9ab448c748dfdcb1a698, type: 3}
     - target: {fileID: 7862707694907726429, guid: a5e9ae9adaece134484ccec0c01c8f0c, type: 3}
       propertyPath: m_Name
       value: Block (6)
@@ -941,6 +949,12 @@ MonoBehaviour:
   delayBeforeDialogue: 3
   trigger1: {fileID: 1300681871}
   trigger2: {fileID: 263047812}
+  endingChoice: 0
+  joinText: {fileID: 0}
+  arrestText: {fileID: 0}
+  nameText: {fileID: 0}
+  continueText: {fileID: 0}
+  dialogueText: {fileID: 0}
 --- !u!4 &339171434
 Transform:
   m_ObjectHideFlags: 0
@@ -964,6 +978,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7862707694266351669, guid: a5e9ae9adaece134484ccec0c01c8f0c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 283114147474018091, guid: 43f96fe1c61b9ab448c748dfdcb1a698, type: 3}
     - target: {fileID: 7862707694907726429, guid: a5e9ae9adaece134484ccec0c01c8f0c, type: 3}
       propertyPath: m_Name
       value: Block (4)
@@ -1150,6 +1168,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7862707694266351669, guid: a5e9ae9adaece134484ccec0c01c8f0c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -3691683731173625389, guid: 43f96fe1c61b9ab448c748dfdcb1a698, type: 3}
     - target: {fileID: 7862707694907726429, guid: a5e9ae9adaece134484ccec0c01c8f0c, type: 3}
       propertyPath: m_Name
       value: Block (7)
@@ -3867,6 +3889,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7862707694266351669, guid: a5e9ae9adaece134484ccec0c01c8f0c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1307800131867582994, guid: 43f96fe1c61b9ab448c748dfdcb1a698, type: 3}
     - target: {fileID: 7862707694907726429, guid: a5e9ae9adaece134484ccec0c01c8f0c, type: 3}
       propertyPath: m_Name
       value: Block (5)
@@ -4033,6 +4059,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7862707694266351669, guid: a5e9ae9adaece134484ccec0c01c8f0c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6855532517719942780, guid: 43f96fe1c61b9ab448c748dfdcb1a698, type: 3}
     - target: {fileID: 7862707694907726429, guid: a5e9ae9adaece134484ccec0c01c8f0c, type: 3}
       propertyPath: m_Name
       value: Block
@@ -4249,6 +4279,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7862707694266351669, guid: a5e9ae9adaece134484ccec0c01c8f0c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -7215633890836742881, guid: 43f96fe1c61b9ab448c748dfdcb1a698, type: 3}
     - target: {fileID: 7862707694907726429, guid: a5e9ae9adaece134484ccec0c01c8f0c, type: 3}
       propertyPath: m_Name
       value: Block (1)
@@ -4306,6 +4340,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7862707694266351669, guid: a5e9ae9adaece134484ccec0c01c8f0c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8257878281299328645, guid: 43f96fe1c61b9ab448c748dfdcb1a698, type: 3}
     - target: {fileID: 7862707694907726429, guid: a5e9ae9adaece134484ccec0c01c8f0c, type: 3}
       propertyPath: m_Name
       value: Block (2)
