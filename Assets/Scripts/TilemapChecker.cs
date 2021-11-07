@@ -6,14 +6,24 @@ using UnityEngine.Tilemaps;
 public class TilemapChecker : MonoBehaviour
 {
     // remove gridLayout & tilemap
-    public GridLayout gridLayout;
-    public Tilemap tilemap;
+    [HideInInspector] public GridLayout gridLayout;
+    [HideInInspector] public Tilemap wallTilemap;
+    [HideInInspector] public Tilemap obstacleTilemap;
+
+    private void Awake()
+    {
+        gridLayout = FindObjectOfType<Grid>();
+        wallTilemap = GameObject.FindGameObjectWithTag("Wall").GetComponent<Tilemap>();
+        obstacleTilemap = GameObject.FindGameObjectWithTag("Obstacle").GetComponent<Tilemap>();
+    }
     public bool CanMove(Vector2 currentPosition, Direction direction)
     {
         Vector2 newPosition = currentPosition + Utils.DirectionToVector(direction);
         Vector3Int cellPositon = gridLayout.WorldToCell(newPosition);
-        TileBase tile = tilemap.GetTile(cellPositon);
-        return tile == null;
+        TileBase wallTile = wallTilemap.GetTile(cellPositon);
+        TileBase obstacleTile = obstacleTilemap.GetTile(cellPositon);
+        Debug.Log(wallTile + " : " + obstacleTile);
+        return wallTile == null && obstacleTile == null;
     }
 
     // remove start and cellposition

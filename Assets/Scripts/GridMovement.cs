@@ -5,11 +5,10 @@ using UnityEngine;
 public class GridMovement : MonoBehaviour
 {
     private bool isMoving;
-    private bool nextMove = true;
     private Vector3 origPos, targetPos;
     private float timeToMove = 0.2f;
 
-    [SerializeField] private TilemapChecker obstacleChecker;
+    [SerializeField] private TilemapChecker tilemapChecker;
     [SerializeField] private BlockChecker blockChecker;
 
     private bool nextMoveVertical = true;
@@ -17,7 +16,7 @@ public class GridMovement : MonoBehaviour
 
     private void Awake()
     {
-        obstacleChecker = GetComponent<TilemapChecker>();
+        tilemapChecker = GetComponent<TilemapChecker>();
         blockChecker = GetComponent<BlockChecker>();
     }
 
@@ -61,7 +60,7 @@ public class GridMovement : MonoBehaviour
 
     private IEnumerator TryToMove(Direction direction)
     {
-        if (obstacleChecker.CanMove(transform.position, direction))
+        if (tilemapChecker.CanMove(transform.position, direction))
         {
             GameObject block = blockChecker.BlockExists(transform.position, direction);
             if ((block != null && block.GetComponent<BlockMove>().MoveInDirection(direction)) || block == null)
