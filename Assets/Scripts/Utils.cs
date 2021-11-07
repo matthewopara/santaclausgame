@@ -63,5 +63,22 @@ public class Utils
         }
     }
 
+    public static Direction GetOppisiteDir(Direction dir)
+    {
+        switch (dir)
+        {
+            case Direction.UP:
+                return Direction.DOWN;
+            case Direction.DOWN:
+                return Direction.UP;
+            case Direction.LEFT:
+                return Direction.RIGHT;
+            case Direction.RIGHT:
+                return Direction.LEFT;
+            default:
+                return Direction.NONE;
+        }
+    }
+
 };
 

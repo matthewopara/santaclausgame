@@ -15,6 +15,9 @@ public class GridMovement : MonoBehaviour
     private bool nextMoveVertical = true;
     private bool nextMoveHorizontal = true;
 
+    [SerializeField] const KeyCode pullButton = KeyCode.LeftShift;
+
+    [SerializeField] public bool mPulling = false;
     private void Awake()
     {
         obstacleChecker = GetComponent<TilemapChecker>();
@@ -66,6 +69,15 @@ public class GridMovement : MonoBehaviour
             GameObject block = blockChecker.BlockExists(transform.position, direction);
             if ((block != null && block.GetComponent<BlockMove>().MoveInDirection(direction)) || block == null)
             {
+                if(Input.GetKey(pullButton))
+                {
+                    block = blockChecker.BlockExists(transform.position,Utils.GetOppisiteDir(direction));
+                    if(block != null)
+                    {
+                        block.GetComponent<BlockMove>().MoveInDirection(direction);
+                        mPulling = true;
+                    }
+                }
                 yield return StartCoroutine(MovePlayer(direction));
             }
         }
@@ -90,5 +102,9 @@ public class GridMovement : MonoBehaviour
         transform.position = targetPos;
 
         isMoving = false;
+        if(mPulling)
+        {
+            mPulling = false;
+        }
     }
 }
