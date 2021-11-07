@@ -235,15 +235,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7331658646177183943, guid: 6fb90f60b7a2405468f0b35ed43ec564, type: 3}
       propertyPath: dialogueArray.Array.data[0].sentences.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7331658646177183943, guid: 6fb90f60b7a2405468f0b35ed43ec564, type: 3}
       propertyPath: dialogueArray.Array.data[1].sentences.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7331658646177183943, guid: 6fb90f60b7a2405468f0b35ed43ec564, type: 3}
       propertyPath: dialogueArray.Array.data[0].sentences.Array.data[0]
-      value: Claus 1
+      value: A candy cane...and that's Santa under it! Oh god... (almost faints)
       objectReference: {fileID: 0}
     - target: {fileID: 7331658646177183943, guid: 6fb90f60b7a2405468f0b35ed43ec564, type: 3}
       propertyPath: dialogueArray.Array.data[0].sentences.Array.data[1]
@@ -251,7 +251,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7331658646177183943, guid: 6fb90f60b7a2405468f0b35ed43ec564, type: 3}
       propertyPath: dialogueArray.Array.data[1].sentences.Array.data[0]
-      value: Claus 3
+      value: I can't believe he died in this horrible way.
       objectReference: {fileID: 0}
     - target: {fileID: 7331658646177183943, guid: 6fb90f60b7a2405468f0b35ed43ec564, type: 3}
       propertyPath: dialogueArray.Array.data[1].sentences.Array.data[1]
@@ -379,6 +379,33 @@ PrefabInstance:
 --- !u!224 &483686862 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8933859017922851608, guid: 90a5de7410dba264cab4599311b4b0ec, type: 3}
+  m_PrefabInstance: {fileID: 483686861}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &483686863 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8933859017088886123, guid: 90a5de7410dba264cab4599311b4b0ec, type: 3}
+  m_PrefabInstance: {fileID: 483686861}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &483686864 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8933859016564045797, guid: 90a5de7410dba264cab4599311b4b0ec, type: 3}
+  m_PrefabInstance: {fileID: 483686861}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &483686865 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8933859017922851607, guid: 90a5de7410dba264cab4599311b4b0ec, type: 3}
   m_PrefabInstance: {fileID: 483686861}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &545610570
@@ -537,6 +564,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7056462085782384853, guid: 56f1cccc4dcff2d429a74be0ee305709, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 483686865}
+    - target: {fileID: 7056462085782384853, guid: 56f1cccc4dcff2d429a74be0ee305709, type: 3}
+      propertyPath: nameText
+      value: 
+      objectReference: {fileID: 483686864}
+    - target: {fileID: 7056462085782384853, guid: 56f1cccc4dcff2d429a74be0ee305709, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 483686863}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56f1cccc4dcff2d429a74be0ee305709, type: 3}
 --- !u!1 &1137692855
@@ -3117,15 +3156,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7331658646177183943, guid: 6fb90f60b7a2405468f0b35ed43ec564, type: 3}
       propertyPath: dialogueArray.Array.data[0].sentences.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7331658646177183943, guid: 6fb90f60b7a2405468f0b35ed43ec564, type: 3}
       propertyPath: dialogueArray.Array.data[1].sentences.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7331658646177183943, guid: 6fb90f60b7a2405468f0b35ed43ec564, type: 3}
       propertyPath: dialogueArray.Array.data[0].sentences.Array.data[0]
-      value: Elf 1
+      value: Apparently, Mr. Claus was stabbed by a candy cane.
       objectReference: {fileID: 0}
     - target: {fileID: 7331658646177183943, guid: 6fb90f60b7a2405468f0b35ed43ec564, type: 3}
       propertyPath: dialogueArray.Array.data[0].sentences.Array.data[1]
@@ -3133,11 +3172,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7331658646177183943, guid: 6fb90f60b7a2405468f0b35ed43ec564, type: 3}
       propertyPath: dialogueArray.Array.data[1].sentences.Array.data[0]
-      value: Elf 2
+      value: We are in this together Mrs. Claus.
       objectReference: {fileID: 0}
     - target: {fileID: 7331658646177183943, guid: 6fb90f60b7a2405468f0b35ed43ec564, type: 3}
       propertyPath: dialogueArray.Array.data[1].sentences.Array.data[1]
-      value: Elf 3
+      value: I'll collect the next photo.
       objectReference: {fileID: 0}
     - target: {fileID: 7331658646177183943, guid: 6fb90f60b7a2405468f0b35ed43ec564, type: 3}
       propertyPath: dialogueArray.Array.data[1].sentences.Array.data[2]
