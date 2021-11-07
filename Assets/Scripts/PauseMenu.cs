@@ -47,13 +47,14 @@ public class PauseMenu : MonoBehaviour
     public void LoadMenu()
     {
         Debug.Log("Loading Menu");
-        SceneManager.LoadScene("Main Menu");
+        FindObjectOfType<LevelLoader>().LoadLevel(0);
+        Resume();
     }
 
     public void RestartLevel()
     {
         Debug.Log("Restarting Level");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        FindObjectOfType<LevelLoader>().ReloadCurrentLevel();
         Resume();
     }
 }
