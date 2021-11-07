@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class GridMovement : MonoBehaviour
 {
-    private bool isMoving;
     private Vector3 origPos, targetPos;
     private float timeToMove = 0.2f;
 
     [SerializeField] private TilemapChecker tilemapChecker;
     [SerializeField] private BlockChecker blockChecker;
+    public Animator animator;
+    public GameObject GFX;
 
     private bool nextMoveVertical = true;
     private bool nextMoveHorizontal = true;
@@ -17,47 +18,68 @@ public class GridMovement : MonoBehaviour
     [SerializeField] const KeyCode pullButton = KeyCode.LeftShift;
 
     [SerializeField] public bool mPulling = false;
+    [SerializeField] public bool mPushing = false;
+    [SerializeField] public bool mActive = true;
+    [SerializeField] public bool isMoving;
+    [SerializeField] Direction mDir = Direction.NONE;
     private void Awake()
     {
         tilemapChecker = GetComponent<TilemapChecker>();
         blockChecker = GetComponent<BlockChecker>();
+        animator = GFX.GetComponent<Animator>();
+    }
+
+    public void DisapleMovement()
+    {
+        mActive = false;
+    }
+
+    public void EnableMovement()
+    {
+        mActive = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetAxisRaw("Vertical") == 0)
+        if (mActive)
         {
-            nextMoveVertical = true;
-        }
+            if (Input.GetAxisRaw("Vertical") == 0)
+            {
+                nextMoveVertical = true;
+            }
 
-        if (Input.GetAxisRaw("Horizontal") == 0)
-        {
-            nextMoveHorizontal = true;
-        }
+            if (Input.GetAxisRaw("Horizontal") == 0)
+            {
+                nextMoveHorizontal = true;
+            }
 
-        if (Input.GetAxisRaw("Vertical") == 1 && !isMoving && nextMoveVertical)
-        {
-            StartCoroutine(TryToMove(Direction.UP));
-            nextMoveVertical = false;
-        }
+            if (Input.GetAxisRaw("Vertical") == 1 && !isMoving && nextMoveVertical)
+            {
+                StartCoroutine(TryToMove(Direction.UP));
+                nextMoveVertical = false;
+            }
 
-        if (Input.GetAxisRaw("Horizontal") == -1 && !isMoving && nextMoveHorizontal)
-        {
-            StartCoroutine(TryToMove(Direction.LEFT));
-            nextMoveHorizontal = false;
-        }
+            if (Input.GetAxisRaw("Horizontal") == -1 && !isMoving && nextMoveHorizontal)
+            {
+                StartCoroutine(TryToMove(Direction.LEFT));
+                nextMoveHorizontal = false;
+            }
 
-        if (Input.GetAxisRaw("Vertical") == -1 && !isMoving && nextMoveVertical)
-        {
-            StartCoroutine(TryToMove(Direction.DOWN));
-            nextMoveVertical = false;
-        }
+            if (Input.GetAxisRaw("Vertical") == -1 && !isMoving && nextMoveVertical)
+            {
+                StartCoroutine(TryToMove(Direction.DOWN));
+                nextMoveVertical = false;
+            }
 
-        if (Input.GetAxisRaw("Horizontal") == 1 && !isMoving && nextMoveHorizontal)
-        {
-            StartCoroutine(TryToMove(Direction.RIGHT));
-            nextMoveHorizontal = false;
+            if (Input.GetAxisRaw("Horizontal") == 1 && !isMoving && nextMoveHorizontal)
+            {
+                StartCoroutine(TryToMove(Direction.RIGHT));
+                nextMoveHorizontal = false;
+            }
+            animator.SetBool("Walking", isMoving && !mPulling && mPushing);
+            animator.SetBool("Pushing", mPushing);
+            animator.SetBool("Pulling", mPulling);
         }
     }
 
@@ -66,17 +88,21 @@ public class GridMovement : MonoBehaviour
         if (tilemapChecker.CanMove(transform.position, direction))
         {
             GameObject block = blockChecker.BlockExists(transform.position, direction);
-            if ((block != null && block.GetComponent<BlockMove>().MoveInDirection(direction)) || block == null)
+            if ((block != null && (mPushing = block.GetComponent<BlockMove>().MoveInDirection(direction))) || block == null)
             {
-                if(Input.GetKey(pullButton))
+                if (Input.GetKey(pullButton) && !mPushing)
                 {
-                    block = blockChecker.BlockExists(transform.position,Utils.GetOppisiteDir(direction));
-                    if(block != null)
+                    block = blockChecker.BlockExists(transform.position, Utils.GetOppisiteDir(direction));
+                    if (block != null)
                     {
                         block.GetComponent<BlockMove>().MoveInDirection(direction);
                         mPulling = true;
                     }
                 }
+                mDir = direction;
+                var dirVec = Utils.DirectionToVector(mDir);
+                animator.SetFloat("x", dirVec.x);
+                animator.SetFloat("y", dirVec.y);
                 yield return StartCoroutine(MovePlayer(direction));
             }
         }
@@ -101,9 +127,14 @@ public class GridMovement : MonoBehaviour
         transform.position = targetPos;
 
         isMoving = false;
-        if(mPulling)
+        if (mPulling)
         {
             mPulling = false;
         }
+        if (mPushing)
+        {
+            mPushing = false;
+        }
+
     }
 }
