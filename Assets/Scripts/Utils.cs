@@ -8,9 +8,9 @@ public enum Direction : byte
 	NONE = 0, UP = 1, DOWN = 2, LEFT = 3, RIGHT = 4
 }
 
-public class CollisonSide
-{
 
+public class Utils
+{
 	public static Direction ColSide(BoxCollider2D current, BoxCollider2D other)
     {
         if(!current.IsTouching(other))
@@ -43,5 +43,25 @@ public class CollisonSide
 			return Direction.RIGHT;
 		}
 	}
+
+    public static Vector2 DirectionToVector(Direction direction)
+    {
+        switch (direction)
+        {
+            case Direction.NONE:
+                return Vector2.zero;
+            case Direction.UP:
+                return Vector2.up;
+            case Direction.DOWN:
+                return Vector2.down;
+            case Direction.LEFT:
+                return Vector2.left;
+            case Direction.RIGHT:
+                return Vector2.right;
+            default:
+                return Vector2.zero;
+        }
+    }
+
 };
 

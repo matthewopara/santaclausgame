@@ -6,55 +6,83 @@ public class GridMovement : MonoBehaviour
 {
     private bool isMoving;
     private bool nextMove = true;
-    private Vector3 origPos, targetPos;
-    private float timeToMove = 0.2f;
+    private Direction mDir;
+    public TilemapChecker checker;
+    float elapsedTime = 0;
+    public Rigidbody2D rb;
+    Vector2 origPos;
 
+    bool mW = false, mA = false, mD = false, mS = false;
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (Input.GetAxisRaw("Vertical") == 0 && Input.GetAxisRaw("Horizontal") == 0)
-            nextMove = true;
-
-        if (Input.GetAxisRaw("Vertical") == 1 && !isMoving && nextMove){
-            StartCoroutine(MovePlayer(Vector3.up));
-            nextMove = false;
-        }
-
-        if (Input.GetAxisRaw("Horizontal") == -1 && !isMoving && nextMove){
-            StartCoroutine(MovePlayer(Vector3.left));
-            nextMove = false;
-        }
-
-        if (Input.GetAxisRaw("Vertical") == -1 && !isMoving && nextMove){
-            StartCoroutine(MovePlayer(Vector3.down));
-            nextMove = false;
-        }
-
-        if (Input.GetAxisRaw("Horizontal") == 1 && !isMoving && nextMove){
-            StartCoroutine(MovePlayer(Vector3.right));
-            nextMove = false;
+        if (collision.gameObject.CompareTag("Block"))
+        {
+            var blockMove = collision.gameObject.GetComponent<BlockMove>();
+            if(!blockMove.MoveInDirection(mDir))
+            {
+                targetPosition = origPos;
+            }
         }
     }
 
-    private IEnumerator MovePlayer(Vector3 direction)
+    private Vector2 targetPosition;
+    public float speed = 4;
+
+    private void Start()
     {
-        isMoving = true;
+        // Set this so we don't wander off at the start
+        targetPosition = rb.position;
+    }
 
-        float elapsedTime = 0;
+    private void Update()
+    {
+        var moving = rb.position != targetPosition;
 
-        origPos = transform.position;
-        targetPos = origPos + direction;
-
-        while (elapsedTime < timeToMove)
+        if (moving)
         {
-            transform.position = Vector3.Lerp(origPos, targetPos, (elapsedTime / timeToMove));
-            elapsedTime += Time.deltaTime;
-            yield return null;
+            MoveTowardsTargetPosition();
         }
+        else
+        {
+            SetNewTargetPositionFromInput();
+        }
+    }
 
-        transform.position = targetPos;
+    private void MoveTowardsTargetPosition()
+    {
+        transform.position = Vector2.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
+    }
 
-        isMoving = false;
+    private void SetNewTargetPositionFromInput()
+    {
+        if (!mW && Input.GetKey(KeyCode.W) && checker.CanMove(transform.position, Direction.UP))
+        {
+            mDir = Direction.UP;
+            origPos = rb.position;
+            targetPosition += Vector2Int.up;
+        }
+        else if (!mA && Input.GetKey(KeyCode.A) && checker.CanMove(transform.position, Direction.LEFT))
+        {
+            mDir = Direction.LEFT;
+            origPos = rb.position;
+            targetPosition += Vector2Int.left;
+        }
+        else if (!mD && Input.GetKey(KeyCode.D) && checker.CanMove(transform.position, Direction.RIGHT))
+        {
+            mDir = Direction.RIGHT;
+            origPos = rb.position;
+            targetPosition += Vector2Int.right;
+        }
+        else if (!mS && Input.GetKey(KeyCode.S) && checker.CanMove(transform.position, Direction.DOWN))
+        {
+            mDir = Direction.DOWN;
+            origPos = rb.position;
+            targetPosition += Vector2Int.down;
+        }
+        mS = Input.GetKey(KeyCode.S);
+        mD = Input.GetKey(KeyCode.D);
+        mW = Input.GetKey(KeyCode.W);
+        mA = Input.GetKey(KeyCode.A);
     }
 }
