@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: 31014adda61486948a391c9cae491b2a
+guid: d6fe847195a44994cb3256d70bde5ebc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8863269406554460442
-    second: PushPullRight-1.png_0
+      213: -8829926984326563554
+    second: Idle Right_0
   - first:
-      213: 5397023190136006175
-    second: PushPullRight-1.png_1
+      213: 6277492325132472355
+    second: Idle Right_1
   - first:
-      213: -7126063810874849074
-    second: PushPullRight-1.png_2
+      213: 5578259350225230449
+    second: Idle Right_2
   - first:
-      213: -6928658341582504194
-    second: PushPullRight-1.png_3
+      213: 6473138818428417091
+    second: Idle Right_3
   - first:
-      213: -3753660138552417938
-    second: PushPullRight-1.png_4
+      213: -4184569583870868669
+    second: Idle Right_4
   - first:
-      213: 7915860778614714984
-    second: PushPullRight-1.png_5
+      213: 8634591339498505907
+    second: Idle Right_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -105,29 +105,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PushPullRight-1.png_0
+      name: Idle Right_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 370
-        width: 333.33334
-        height: 370
+        y: 37
+        width: 33.333332
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -135,20 +123,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a11144ec098a00b70800000000000000
-      internalID: 8863269406554460442
+      spriteID: e193492d03cc57580800000000000000
+      internalID: -8829926984326563554
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PushPullRight-1.png_1
+      name: Idle Right_1
       rect:
         serializedVersion: 2
-        x: 333
-        y: 370
-        width: 333.33334
-        height: 370
+        x: 33
+        y: 37
+        width: 33.333332
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,20 +144,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f162a9c2ff316ea40800000000000000
-      internalID: 5397023190136006175
+      spriteID: 32013c792022e1750800000000000000
+      internalID: 6277492325132472355
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PushPullRight-1.png_2
+      name: Idle Right_2
       rect:
         serializedVersion: 2
-        x: 666
-        y: 370
-        width: 333.33334
-        height: 370
+        x: 66
+        y: 37
+        width: 33.333332
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,20 +165,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec8c90238b22b1d90800000000000000
-      internalID: -7126063810874849074
+      spriteID: 17a1d2bf255f96d40800000000000000
+      internalID: 5578259350225230449
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PushPullRight-1.png_3
+      name: Idle Right_3
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 333.33334
-        height: 370
+        width: 33.333332
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,20 +186,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: efe7deba2f578df90800000000000000
-      internalID: -6928658341582504194
+      spriteID: 344b73e857535d950800000000000000
+      internalID: 6473138818428417091
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PushPullRight-1.png_4
+      name: Idle Right_4
       rect:
         serializedVersion: 2
-        x: 333
+        x: 33
         y: 0
-        width: 333.33334
-        height: 370
+        width: 33.333332
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -219,20 +207,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e612a02edf158ebc0800000000000000
-      internalID: -3753660138552417938
+      spriteID: 343097f522c6de5c0800000000000000
+      internalID: -4184569583870868669
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PushPullRight-1.png_5
+      name: Idle Right_5
       rect:
         serializedVersion: 2
-        x: 666
+        x: 66
         y: 0
-        width: 333.33334
-        height: 370
+        width: 33.333332
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -240,8 +228,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 862f6c82079cadd60800000000000000
-      internalID: 7915860778614714984
+      spriteID: 3b60973431b34d770800000000000000
+      internalID: 8634591339498505907
       vertices: []
       indices: 
       edges: []

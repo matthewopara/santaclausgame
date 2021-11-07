@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: 31014adda61486948a391c9cae491b2a
+guid: 3b20d640dc028a7488126ae048d560ee
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8863269406554460442
-    second: PushPullRight-1.png_0
+      213: -2578756753830379851
+    second: PushPullforward (IdleWithoutArms)_0
   - first:
-      213: 5397023190136006175
-    second: PushPullRight-1.png_1
+      213: -601827941357737315
+    second: PushPullforward (IdleWithoutArms)_1
   - first:
-      213: -7126063810874849074
-    second: PushPullRight-1.png_2
+      213: -4810822405276741837
+    second: PushPullforward (IdleWithoutArms)_2
   - first:
-      213: -6928658341582504194
-    second: PushPullRight-1.png_3
+      213: -6508109849756724812
+    second: PushPullforward (IdleWithoutArms)_3
   - first:
-      213: -3753660138552417938
-    second: PushPullRight-1.png_4
+      213: 5564265704363241098
+    second: PushPullforward (IdleWithoutArms)_4
   - first:
-      213: 7915860778614714984
-    second: PushPullRight-1.png_5
+      213: -8337813710175233139
+    second: PushPullforward (IdleWithoutArms)_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -105,29 +105,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PushPullRight-1.png_0
+      name: PushPullforward (IdleWithoutArms)_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 370
-        width: 333.33334
-        height: 370
+        y: 37
+        width: 33.333332
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -135,20 +123,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a11144ec098a00b70800000000000000
-      internalID: 8863269406554460442
+      spriteID: 5befccd256a663cd0800000000000000
+      internalID: -2578756753830379851
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PushPullRight-1.png_1
+      name: PushPullforward (IdleWithoutArms)_1
       rect:
         serializedVersion: 2
-        x: 333
-        y: 370
-        width: 333.33334
-        height: 370
+        x: 33
+        y: 37
+        width: 33.333332
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,20 +144,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f162a9c2ff316ea40800000000000000
-      internalID: 5397023190136006175
+      spriteID: d9aa77b0da0e5a7f0800000000000000
+      internalID: -601827941357737315
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PushPullRight-1.png_2
+      name: PushPullforward (IdleWithoutArms)_2
       rect:
         serializedVersion: 2
-        x: 666
-        y: 370
-        width: 333.33334
-        height: 370
+        x: 66
+        y: 37
+        width: 33.333332
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,20 +165,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec8c90238b22b1d90800000000000000
-      internalID: -7126063810874849074
+      spriteID: 33f4dffd2868c3db0800000000000000
+      internalID: -4810822405276741837
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PushPullRight-1.png_3
+      name: PushPullforward (IdleWithoutArms)_3
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 333.33334
-        height: 370
+        width: 33.333332
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,20 +186,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: efe7deba2f578df90800000000000000
-      internalID: -6928658341582504194
+      spriteID: 4b19706b29c8ea5a0800000000000000
+      internalID: -6508109849756724812
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PushPullRight-1.png_4
+      name: PushPullforward (IdleWithoutArms)_4
       rect:
         serializedVersion: 2
-        x: 333
+        x: 33
         y: 0
-        width: 333.33334
-        height: 370
+        width: 33.333332
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -219,20 +207,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e612a02edf158ebc0800000000000000
-      internalID: -3753660138552417938
+      spriteID: a8ea5786d2e383d40800000000000000
+      internalID: 5564265704363241098
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PushPullRight-1.png_5
+      name: PushPullforward (IdleWithoutArms)_5
       rect:
         serializedVersion: 2
-        x: 666
+        x: 66
         y: 0
-        width: 333.33334
-        height: 370
+        width: 33.333332
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -240,8 +228,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 862f6c82079cadd60800000000000000
-      internalID: 7915860778614714984
+      spriteID: d8b9f913b922a4c80800000000000000
+      internalID: -8337813710175233139
       vertices: []
       indices: 
       edges: []
