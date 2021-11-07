@@ -4,13 +4,6 @@ using UnityEngine;
 
 public class BlockChecker : MonoBehaviour
 {
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            Debug.Log(BlockExists(transform.position, Direction.UP));
-        }
-    }
     public bool BlockExists(Vector2 currentPosition, Direction direction)
     {
         //RaycastHit2D[] hits = Physics2D.RaycastAll(currentPosition, DirectionToVector(direction), 1f);
