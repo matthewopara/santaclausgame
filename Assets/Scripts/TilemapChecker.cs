@@ -22,7 +22,6 @@ public class TilemapChecker : MonoBehaviour
         Vector3Int cellPositon = gridLayout.WorldToCell(newPosition);
         TileBase wallTile = wallTilemap.GetTile(cellPositon);
         TileBase obstacleTile = obstacleTilemap.GetTile(cellPositon);
-        Debug.Log(wallTile + " : " + obstacleTile);
         return wallTile == null && obstacleTile == null;
     }
 

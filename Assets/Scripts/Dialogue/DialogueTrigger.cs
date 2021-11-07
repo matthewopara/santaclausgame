@@ -5,22 +5,42 @@ using UnityEngine;
 public class DialogueTrigger : MonoBehaviour
 {
     private DialogueManager dialogueManager;
-    public Dialogue dialogue;
+
+    public Dialogue[] dialogueArray;
+    private int currentDialogueIdx = 0;
+    public bool dialogueComplete { get; private set; }
+    public bool allDialoguesComplete { get; private set; }
 
     private void Awake()
     {
         dialogueManager = FindObjectOfType<DialogueManager>();
     }
 
-    private void Update()
+    public IEnumerator NextDialogue()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (currentDialogueIdx < dialogueArray.Length)
         {
-            dialogueManager.StartDialogue(dialogue);
+            dialogueManager.StartDialogue(dialogueArray[currentDialogueIdx]);
+            currentDialogueIdx++;
+
+            while (true)
+            {
+                yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Return));
+                yield return null;
+                bool moreDialogue = dialogueManager.DisplayNextSentence();
+                if (!moreDialogue)
+                {
+                    break;
+                }
+            }
+
         }
-        if (Input.GetKeyDown(KeyCode.Alpha0))
+        else
         {
-            dialogueManager.DisplayNextSentence();
+            allDialoguesComplete = true;
         }
+
+        dialogueComplete = true;
+
     }
 }
