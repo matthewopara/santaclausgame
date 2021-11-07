@@ -6,33 +6,46 @@ public class BlockMove : MonoBehaviour
 {
     public GameObject player;
     private Vector2 targetPosition, mDir;
-    const float speed = 2;
+    public const float speed = 2;
     public Rigidbody2D rb;
     public BoxCollider2D box;
-    bool mMoving = false;
+    public TilemapChecker checker;
+    public BlockChecker blockChecker;
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public bool MoveInDirection(Direction direction)
     {
-
-        if (box.IsTouching(player.GetComponent<BoxCollider2D>()))
-        { 
-            switch (CollisonSide.ColSide(box, (BoxCollider2D)collision.collider))
-            {
-                case Direction.UP:
-                    targetPosition += Vector2.down;
-                    break;
-                case Direction.LEFT:
-                    targetPosition += Vector2.right;
-                    break;
-                case Direction.RIGHT:
-                    targetPosition += Vector2.left;
-                    break;
-                case Direction.DOWN:
-                    targetPosition += Vector2.up;
-                    break;
-            } 
+        var vecDir = Utils.DirectionToVector(direction);
+        if(!checker.CanMove(rb.position,direction) || blockChecker.BlockExists(rb.position, direction))
+        {
+            return false;
         }
+        targetPosition += vecDir;
+        return true;
     }
+
+
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+
+    //    if (box.IsTouching(player.GetComponent<BoxCollider2D>()))
+    //    { 
+    //        switch (CollisonSide.ColSide(box, (BoxCollider2D)collision.collider))
+    //        {
+    //            case Direction.UP:
+    //                targetPosition += Vector2.down;
+    //                break;
+    //            case Direction.LEFT:
+    //                targetPosition += Vector2.right;
+    //                break;
+    //            case Direction.RIGHT:
+    //                targetPosition += Vector2.left;
+    //                break;
+    //            case Direction.DOWN:
+    //                targetPosition += Vector2.up;
+    //                break;
+    //        } 
+    //    }
+    //}
 
     private void Start()
     {
