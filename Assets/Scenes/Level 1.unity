@@ -176,7 +176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7331658646177183943, guid: 6fb90f60b7a2405468f0b35ed43ec564, type: 3}
       propertyPath: dialogueArray.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7331658646177183943, guid: 6fb90f60b7a2405468f0b35ed43ec564, type: 3}
       propertyPath: dialogueArray.Array.data[0].name
@@ -187,16 +187,24 @@ PrefabInstance:
       value: Elf
       objectReference: {fileID: 0}
     - target: {fileID: 7331658646177183943, guid: 6fb90f60b7a2405468f0b35ed43ec564, type: 3}
+      propertyPath: dialogueArray.Array.data[2].name
+      value: Elf
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331658646177183943, guid: 6fb90f60b7a2405468f0b35ed43ec564, type: 3}
       propertyPath: dialogueArray.Array.data[0].sentences.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7331658646177183943, guid: 6fb90f60b7a2405468f0b35ed43ec564, type: 3}
       propertyPath: dialogueArray.Array.data[1].sentences.Array.size
-      value: 3
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331658646177183943, guid: 6fb90f60b7a2405468f0b35ed43ec564, type: 3}
+      propertyPath: dialogueArray.Array.data[2].sentences.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7331658646177183943, guid: 6fb90f60b7a2405468f0b35ed43ec564, type: 3}
       propertyPath: dialogueArray.Array.data[0].sentences.Array.data[0]
-      value: Elf 1
+      value: What happened Mrs. Claus?
       objectReference: {fileID: 0}
     - target: {fileID: 7331658646177183943, guid: 6fb90f60b7a2405468f0b35ed43ec564, type: 3}
       propertyPath: dialogueArray.Array.data[0].sentences.Array.data[1]
@@ -204,15 +212,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7331658646177183943, guid: 6fb90f60b7a2405468f0b35ed43ec564, type: 3}
       propertyPath: dialogueArray.Array.data[1].sentences.Array.data[0]
-      value: Elf 2
+      value: Don't be too sad Mrs. Claus, you still have me.
       objectReference: {fileID: 0}
     - target: {fileID: 7331658646177183943, guid: 6fb90f60b7a2405468f0b35ed43ec564, type: 3}
       propertyPath: dialogueArray.Array.data[1].sentences.Array.data[1]
-      value: Elf 3
+      value: Did you see the killer?
       objectReference: {fileID: 0}
     - target: {fileID: 7331658646177183943, guid: 6fb90f60b7a2405468f0b35ed43ec564, type: 3}
       propertyPath: dialogueArray.Array.data[1].sentences.Array.data[2]
       value: Elf 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331658646177183943, guid: 6fb90f60b7a2405468f0b35ed43ec564, type: 3}
+      propertyPath: dialogueArray.Array.data[2].sentences.Array.data[0]
+      value: Of course. I'll do anything for you and Mr. Claus.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331658646177183943, guid: 6fb90f60b7a2405468f0b35ed43ec564, type: 3}
+      propertyPath: dialogueArray.Array.data[2].sentences.Array.data[1]
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7331658646177183944, guid: 6fb90f60b7a2405468f0b35ed43ec564, type: 3}
       propertyPath: m_Name
@@ -3966,7 +3982,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7331658646177183943, guid: 6fb90f60b7a2405468f0b35ed43ec564, type: 3}
       propertyPath: dialogueArray.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7331658646177183943, guid: 6fb90f60b7a2405468f0b35ed43ec564, type: 3}
       propertyPath: dialogueArray.Array.data[0].name
@@ -3977,16 +3993,24 @@ PrefabInstance:
       value: Mrs. Claus
       objectReference: {fileID: 0}
     - target: {fileID: 7331658646177183943, guid: 6fb90f60b7a2405468f0b35ed43ec564, type: 3}
+      propertyPath: dialogueArray.Array.data[2].name
+      value: Mrs. Claus
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331658646177183943, guid: 6fb90f60b7a2405468f0b35ed43ec564, type: 3}
       propertyPath: dialogueArray.Array.data[0].sentences.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7331658646177183943, guid: 6fb90f60b7a2405468f0b35ed43ec564, type: 3}
       propertyPath: dialogueArray.Array.data[1].sentences.Array.size
-      value: 2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331658646177183943, guid: 6fb90f60b7a2405468f0b35ed43ec564, type: 3}
+      propertyPath: dialogueArray.Array.data[2].sentences.Array.size
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7331658646177183943, guid: 6fb90f60b7a2405468f0b35ed43ec564, type: 3}
       propertyPath: dialogueArray.Array.data[0].sentences.Array.data[0]
-      value: Claus 1
+      value: Oh dear!! I'm so happy that you came. It's my worst day ever!
       objectReference: {fileID: 0}
     - target: {fileID: 7331658646177183943, guid: 6fb90f60b7a2405468f0b35ed43ec564, type: 3}
       propertyPath: dialogueArray.Array.data[0].sentences.Array.data[1]
@@ -3994,11 +4018,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7331658646177183943, guid: 6fb90f60b7a2405468f0b35ed43ec564, type: 3}
       propertyPath: dialogueArray.Array.data[1].sentences.Array.data[0]
-      value: Claus 3
+      value: Someone...someone...killed... no, MURDERED Santa Claus!!! (crying)
       objectReference: {fileID: 0}
     - target: {fileID: 7331658646177183943, guid: 6fb90f60b7a2405468f0b35ed43ec564, type: 3}
       propertyPath: dialogueArray.Array.data[1].sentences.Array.data[1]
-      value: Claus 4
+      value: Claus 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331658646177183943, guid: 6fb90f60b7a2405468f0b35ed43ec564, type: 3}
+      propertyPath: dialogueArray.Array.data[2].sentences.Array.data[0]
+      value: (sniffle)...no
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331658646177183943, guid: 6fb90f60b7a2405468f0b35ed43ec564, type: 3}
+      propertyPath: dialogueArray.Array.data[2].sentences.Array.data[1]
+      value: But, oh, I think you can look for clues in this room.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331658646177183943, guid: 6fb90f60b7a2405468f0b35ed43ec564, type: 3}
+      propertyPath: dialogueArray.Array.data[2].sentences.Array.data[2]
+      value: ' I almost forgot that we have miraculous photos.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331658646177183943, guid: 6fb90f60b7a2405468f0b35ed43ec564, type: 3}
+      propertyPath: dialogueArray.Array.data[2].sentences.Array.data[3]
+      value: These photos record every moment in this world...
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331658646177183943, guid: 6fb90f60b7a2405468f0b35ed43ec564, type: 3}
+      propertyPath: dialogueArray.Array.data[2].sentences.Array.data[4]
+      value: I don't know why they ar broken into pieces on thte floor.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331658646177183943, guid: 6fb90f60b7a2405468f0b35ed43ec564, type: 3}
+      propertyPath: dialogueArray.Array.data[2].sentences.Array.data[5]
+      value: Can you help me restore the miraculous photos?
       objectReference: {fileID: 0}
     - target: {fileID: 7331658646177183944, guid: 6fb90f60b7a2405468f0b35ed43ec564, type: 3}
       propertyPath: m_Name
