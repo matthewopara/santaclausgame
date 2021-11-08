@@ -16,7 +16,7 @@ public class GridMovement : MonoBehaviour
     private bool nextMoveHorizontal = true;
 
     [SerializeField] const KeyCode pullButton = KeyCode.LeftShift;
-
+    [SerializeField] public AudioManager audioManager;
     [SerializeField] public bool mPulling = false;
     [SerializeField] public bool mPushing = false;
     [SerializeField] public bool mActive = true;
@@ -103,11 +103,17 @@ public class GridMovement : MonoBehaviour
                 mDir = direction;
                 var dirVec = Utils.DirectionToVector(mDir);
                 isMoving = true;
+                if(mPulling || mPushing)
+                {
+                    audioManager.Play("Move_Block");
+                }
                 animator.SetFloat("x", dirVec.x);
                 animator.SetFloat("y", dirVec.y);
                 StartCoroutine(MovePlayer(direction));
+                return;
             }
         }
+        audioManager.Play("Impact");
     }
 
     private IEnumerator MovePlayer(Direction direction)
