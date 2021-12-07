@@ -7,7 +7,9 @@ public class DialogueManager : MonoBehaviour
 {
     public Text nameText;
     [SerializeField] private Text dialogueText;
+    [SerializeField] private Image faceImage;
     private Queue<string> sentences;
+    private Queue<Sprite> faces;
 
     [SerializeField] private Animator animator;
     private int IS_OPEN = Animator.StringToHash("IsOpen");
@@ -17,22 +19,31 @@ public class DialogueManager : MonoBehaviour
     private void Awake()
     {
         sentences = new Queue<string>();
+        faces = new Queue<Sprite>();
     }
     
-    public void StartDialogue(Dialogue dialogue)
+    public void StartDialogue(Dialogue dialogue, bool isClaus)
     {
         animator.SetBool(IS_OPEN, true);
         nameText.text = dialogue.name;
         sentences.Clear();
-        foreach (string sentence in dialogue.sentences)
+        for (int i = 0; i < dialogue.sentences.Length; i++)
+        {
+            sentences.Enqueue(dialogue.sentences[i]);
+            if (dialogue.faces.Length > i)
+            {
+                faces.Enqueue(dialogue.faces[i]);
+            }
+        }
+        /*foreach (string sentence in dialogue.sentences)
         {
             sentences.Enqueue(sentence);
-        }
+        }*/
 
-        DisplayNextSentence();
+        DisplayNextSentence(isClaus);
     }
 
-    public bool DisplayNextSentence()
+    public bool DisplayNextSentence(bool isClaus)
     {
         if (sentences.Count == 0)
         {
@@ -46,6 +57,10 @@ public class DialogueManager : MonoBehaviour
             StopCoroutine(currentTypeSentence);
         }
         currentTypeSentence = TypeSentence(sentence);
+        if (faces.Count > 0)
+        {
+            faceImage.sprite = faces.Dequeue();
+        }
         StartCoroutine(currentTypeSentence);
         return true;
     }

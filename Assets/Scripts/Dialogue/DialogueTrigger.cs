@@ -16,18 +16,18 @@ public class DialogueTrigger : MonoBehaviour
         dialogueManager = FindObjectOfType<DialogueManager>();
     }
 
-    public IEnumerator NextDialogue()
+    public IEnumerator NextDialogue(bool isClaus)
     {
         if (currentDialogueIdx < dialogueArray.Length)
         {
-            dialogueManager.StartDialogue(dialogueArray[currentDialogueIdx]);
+            dialogueManager.StartDialogue(dialogueArray[currentDialogueIdx], isClaus);
             currentDialogueIdx++;
 
             while (true)
             {
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Return));
                 yield return null;
-                bool moreDialogue = dialogueManager.DisplayNextSentence();
+                bool moreDialogue = dialogueManager.DisplayNextSentence(isClaus);
                 if (!moreDialogue)
                 {
                     break;

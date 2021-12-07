@@ -29,8 +29,8 @@ public class DoubleDialogueController : MonoBehaviour
         // call a grid movement function to ignore inputs
         while (!trigger1.allDialoguesComplete && !trigger2.allDialoguesComplete)
         {
-            yield return StartCoroutine(trigger1.NextDialogue());
-            yield return StartCoroutine(trigger2.NextDialogue());
+            yield return StartCoroutine(trigger1.NextDialogue(true));
+            yield return StartCoroutine(trigger2.NextDialogue(false));
         }
 
         if (endingChoice)
