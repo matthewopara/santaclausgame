@@ -33,16 +33,24 @@ public class PuzzleChecker : MonoBehaviour
         }
 
         Debug.Log("Puzzle Finished");
-        evidenceAnimator.SetTrigger(SHOW_IMAGE);
-        StartCoroutine(StartNextScene());
+        if (evidenceAnimator != null)
+        {
+            evidenceAnimator.SetTrigger(SHOW_IMAGE);
+            StartCoroutine(StartNextScene(3));
+        }
+        else
+        {
+            StartCoroutine(StartNextScene(0));
+        }
+
         Debug.Log("Level Complete");
         
         // freeze player
     }
 
-    private IEnumerator StartNextScene()
+    private IEnumerator StartNextScene(float waitTime)
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(waitTime);
         levelLoader.LoadNextLevel();
     }
 }
