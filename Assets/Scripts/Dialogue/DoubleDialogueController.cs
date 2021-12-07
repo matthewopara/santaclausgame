@@ -14,6 +14,9 @@ public class DoubleDialogueController : MonoBehaviour
     [SerializeField] private GameObject nameText;
     [SerializeField] private GameObject continueText;
     [SerializeField] private GameObject dialogueText;
+
+    [SerializeField] private GameObject joinEndText;
+    [SerializeField] private GameObject arrestEndText;
     private bool showingChoices = false;
 
     // Start is called before the first frame update
@@ -57,14 +60,24 @@ public class DoubleDialogueController : MonoBehaviour
             Debug.Log("Join Her");
             joinText.SetActive(false);
             arrestText.SetActive(false);
+            joinEndText.SetActive(true);
             FindObjectOfType<DialogueManager>().EndDialogue();
+            StartCoroutine(LoadCredits());
         }
         else if (showingChoices && Input.GetKeyDown(KeyCode.Alpha2))
         {
             Debug.Log("Arrest Her");
             joinText.SetActive(false);
             arrestText.SetActive(false);
+            arrestEndText.SetActive(true);
             FindObjectOfType<DialogueManager>().EndDialogue();
+            StartCoroutine(LoadCredits());
         }
+    }
+
+    private IEnumerator LoadCredits()
+    {
+        yield return new WaitForSeconds(10f);
+        FindObjectOfType<LevelLoader>().LoadNextLevel();
     }
 }
